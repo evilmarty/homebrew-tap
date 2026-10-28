@@ -5,13 +5,13 @@
 class Lazycommit < Formula
   desc "Automates generating a commit message from staged changes in a Git repository using a pluggable LLM provider"
   homepage "https://github.com/evilmarty/lazycommit"
-  version "0.3.0"
+  version "0.3.1"
   license "GPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.0/lazycommit-0.3.0-darwin_amd64"
-      sha256 "d3fcbf83a702146535ed6819f854a9ea3089b65c6191c547e0e76c1c239b7196"
+      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.1/lazycommit-0.3.1-darwin_amd64"
+      sha256 "e1600175ee4b640764b13ee59f4869b22de87483101a785614987e08715d8355"
 
       define_method(:install) do
         if head?
@@ -25,8 +25,8 @@ class Lazycommit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.0/lazycommit-0.3.0-darwin_arm64"
-      sha256 "812ba05bab5df07397a7f61ab526c7108c8757647a44d46ff88f98e5f36c4658"
+      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.1/lazycommit-0.3.1-darwin_arm64"
+      sha256 "b8e4be0f9dc23e165788ea857217aed7785235c92a2f1e00f311f76c6a6fcce3"
 
       define_method(:install) do
         if head?
@@ -43,8 +43,8 @@ class Lazycommit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.0/lazycommit-0.3.0-linux_amd64"
-      sha256 "0cfd3d41a889efac5f4d09d0aa15ec9ed6697048b9f6379b5a2a8c617cd99063"
+      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.1/lazycommit-0.3.1-linux_amd64"
+      sha256 "32dc2728bba0d225ccdaaa690e6c6ccdc2c4304f69374355aa6e5b6a70f26375"
       define_method(:install) do
         if head?
           ldflags = %W[
@@ -57,8 +57,8 @@ class Lazycommit < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.0/lazycommit-0.3.0-linux_armv6"
-      sha256 "5c7c37ab3a9304f263e9963c98e5fff14eea260448b230824ad07088f4387cab"
+      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.1/lazycommit-0.3.1-linux_armv6"
+      sha256 "88200147e27024417d2961ef6562bb372d5dc935af586af6098308c84bbe4e61"
       define_method(:install) do
         if head?
           ldflags = %W[
@@ -71,8 +71,8 @@ class Lazycommit < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.0/lazycommit-0.3.0-linux_arm64"
-      sha256 "befb2d3111286e37fde026a4df604003666d2e7db6fd2864b9aa77ab3562f703"
+      url "https://github.com/evilmarty/lazycommit/releases/download/v0.3.1/lazycommit-0.3.1-linux_arm64"
+      sha256 "9b7873c217b62a8516d21dde805ec2d9ccc8b3de4ff89b0def37e638a7f5db51"
       define_method(:install) do
         if head?
           ldflags = %W[
